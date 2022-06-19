@@ -1,0 +1,338 @@
+<style>
+.theme-bg {
+    background: radial-gradient(circle, #252936 0%, #252936 50%, #333744 100%);
+}
+  .feature .animation-circle-inverse i {
+    top: 52%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+li.timeline,
+li.timeline-right {
+    padding: 15px 0;
+}
+img.img-fluid {
+   animation:featuredProduct 2s infinite;
+   position:relative;
+  animation-delay:1s;
+}
+ @keyframes featuredProduct {
+  	0%{
+      top:0;
+    }
+   50%{
+     top:5px;
+   }
+   100%{
+     top:0;
+   }
+ }
+  .animation-circle-inverse i {
+    background: #a73a36;
+    right: 0;
+    box-shadow: 0 15px 30px 0 rgb(0 0 0 / 11%);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    opacity: .3;
+    transform: scale(1.3);
+    -webkit-animation: ripple1 3s linear infinite;
+    animation: ripple1 3s linear infinite;
+}
+.animation-circle-inverse i:nth-child(2) {
+    -webkit-animation: ripple2 3s linear infinite;
+    animation: ripple2 3s linear infinite;
+}
+.animation-circle-inverse i:nth-child(3) {
+    -webkit-animation: ripple3 3s linear infinite;
+    animation: ripple3 3s linear infinite;
+}
+@keyframes ripple1 {
+  0% {
+    transform: scale(5.5);
+    opacity: .3;
+  }
+  100% {
+    transform: scale(8.5);
+    opacity: 0;
+	}
+}
+  
+@keyframes ripple2 {
+  0% {
+    -ms-transform: scale(3.5);
+    -webkit-transform: scale(3.5);
+    transform: scale(3.5);
+}
+  100% {
+    -ms-transform: scale(5.5);
+    -webkit-transform: scale(5.5);
+    transform: scale(5.5);
+	}
+}
+  @keyframes ripple3 {
+  0% {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+  100% {
+    -ms-transform: scale(3.5);
+    -webkit-transform: scale(3.5);
+    transform: scale(3.5);
+}
+}
+.feature .row {
+    align-items: center;
+}
+.feature  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+  .future-box {
+    padding: 60px 0;
+}
+  .timeline:before {
+    content: "";
+    background: #f44336;
+    position: relative;
+    height: 12px;
+    width: 12px;
+    right: -21px;
+    background-size: cover;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 2;
+    float: right;
+    padding: 0;
+    border: 3px solid hsl(240deg 17% 33%);
+}
+section#feature {
+    position: relative;
+    padding: 0px 0 150px 0;
+}
+  .timeline-right:before {
+    content: "";
+    background: #f44336;
+    position: relative;
+    height: 12px;
+    width: 12px;
+    left: -21px;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 2;
+    float: left;
+    padding: 0;
+    border: 3px solid hsl(240deg 17% 33%);
+}
+  .future-timeline-right:after {
+    content: "";
+    background-color: hsl(240deg 17% 33%);
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: 0;
+    background-size: cover;
+    border-radius: 12px;
+    top: 0;
+}
+  .future-timeline:after {
+    content: "";
+    background-color: hsl(240deg 17% 33%);
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    right: 0;
+    background-size: cover;
+    border-radius: 12px;
+    top: 0;
+}
+  li.timeline {
+    text-align: right;
+}
+  .text-white {
+    color: #fff !important;
+    font-size: 32px;
+    line-height: 110%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 0;
+}
+  li.timeline p {
+    padding-right: 14px;
+}
+  li.timeline-right p {
+   	padding-left:14px; 
+  }
+  li.timeline h4,
+  li.timeline-right h4{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 0;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    display:inline-block;
+}
+  .future-timeline-right ul.text-left {
+    padding-left: 0;
+}
+ .link-item a {
+    position: relative;
+    z-index: 5;
+    background: #2a2e3c !important;
+    cursor: pointer;
+}
+  .link-item {
+   	width:100%;
+    text-align:center;
+  }
+  .link-item a{
+    opacity:1;
+    z-index:5;
+    cursor:pointer;
+    display:inline-block;
+  }
+  @media(max-width:600px){
+   	section#feature {
+      padding-top: 100px;
+  	} 
+    li.timeline::before, li.timeline-right::before {
+      display:none;
+    }
+    li.timeline,
+    li.timeline-right{
+      text-align: right;
+      text-align: center;
+  	}
+    li.timeline p,
+    li.timeline-right p {
+     	text-align:center; 
+    }
+    .future-timeline ul {
+      padding: 0;
+      list-style:none;
+  	}
+    section#feature {
+     overflow-x:hidden; 
+    }
+  }
+</style>
+<section class="theme-bg feature" id="feature" style="padding-top:100px;">
+    <div class="container">
+        <div class="animation-circle-inverse"><i></i><i></i><i></i></div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title xAnim">
+                    <p class="text-uppercase font-weight-bold f-14 mb-4">Featured</p>
+                    <h2 class="text-white">J-21 E Scooter</h2>
+                  <div class="price price--large price--on-sale  price--show-badge" style="padding-bottom: 35px;">
+            <div class="price__container"><div class="price__regular">
+                <span class="visually-hidden visually-hidden--inline">Regular price</span>
+                <span class="price-item price-item--regular">
+                  $1,650.00 USD
+                </span>
+              </div>
+              <div class="price__sale">
+                  <span class="visually-hidden visually-hidden--inline">Regular price</span>
+                  <span>
+                    <s class="price-item price-item--regular">
+
+                        $1,900.00 USD
+
+                    </s>
+                  </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
+                <span class="price-item price-item--sale price-item--last">
+                  $1,650.00 USD
+                </span>
+              </div>
+              <small class="unit-price caption hidden">
+                <span class="visually-hidden">Unit price</span>
+                <span class="price-item price-item--last">
+                  <span></span>
+                  <span aria-hidden="true">/</span>
+                  <span class="visually-hidden">&nbsp;per&nbsp;</span>
+                  <span>
+                  </span>
+                </span>
+              </small>
+            </div><span class="badge price__badge-sale color-accent-2">
+                Sale
+              </span>
+
+              <span class="badge price__badge-sold-out color-inverse">
+                Sold out
+              </span></div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="future-box">
+                    <div class="future-timeline">
+                        <ul>
+                            <li class="timeline xAnim sequenced">
+                                <h4 class="sub-title">Max Speed</h4>
+                                <p class="text-muted">Reach speeds of up to 70km/h</p>
+                            </li>
+                            <li class="timeline xAnim sequenced">
+                                <h4 class="sub-title">Max Range</h4>
+                                <p class="text-muted">Travel at ranges of up to 80km</p>
+                            </li>
+                            <li class="timeline xAnim sequenced">
+                                <h4 class="sub-title">Max Load</h4>
+                                <p class="text-muted">Supports those heavy loads - up to 150kg of weight</p>
+                            </li>
+                            <li class="timeline xAnim sequenced">
+                                <h4 class="sub-title">Power</h4>
+                                <p class="text-muted">3200w powerful dual motor</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 future-mobile xAnim"><img src="https://cdn.shopify.com/s/files/1/0639/4101/7854/products/H481e0292f34b418193f7a6b91bca05836.png?v=1650458988&width=823" alt="feature-mob" class="img-fluid"></div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="future-box">
+                    <div class="future-timeline-right">
+                        <ul class="text-left">
+                            <li class="timeline-right xAnim sequenced">
+                                <h4>Tires</h4>
+                                <p class="text-muted">10inch all terrain tires</p>
+                            </li>
+                            <li class="timeline-right xAnim sequenced">
+                                <h4>Charge time</h4>
+                                <p class="text-muted">Full charge between 7 - 8 hours</p>
+                            </li>
+                            <li class="timeline-right xAnim sequenced">
+                                <h4>LED Lights</h4>
+                                <p class="text-muted">See in the dark with factory built LED lighting system</p>
+                            </li>
+                            <li class="timeline-right xAnim sequenced">
+                                <h4>Certification</h4>
+                                <p class="text-muted">CE</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="link-item">
+    <a class="btn btn-primary" href="/products/j-21-e-scooter">Learn More <span class="ml-2 right-icon">→</span></a>
+  </div>
+</section>

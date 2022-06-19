@@ -1,0 +1,135 @@
+<style>
+.leaving-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display:none;
+}
+.leaving-modal .filter {
+ 	position:absolute;
+    width:100%;
+  	height:100%;
+  	top:0;
+  	left:0;
+    background: rgba(0,0,0,0.3);
+}
+.leaving-modal.active {
+  display:flex; 
+}
+  .modal-leave {
+    background: linear-gradient(90deg, rgb(49 49 49) 0%, rgb(38 37 37) 50%, rgb(54 53 53) 100%);
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow:0 4px 10px #000;
+    position:relative;
+    animation:leaveIn .6s 1;
+    animation-fill-mode:forwards;
+    opacity:0;
+    top:15px;
+    border: 1px solid #de1e10;
+    border-radius: 5px;
+    z-index:3;
+    position:relative;
+}
+@keyframes leaveIn {
+  	0%{
+      opacity:0;
+      top:15px;
+    }
+    100%{
+	  opacity:1;
+      top:0;
+    }
+}
+p.discount-code {
+    display: inline-block;
+    background: #b22e26;
+    color: #fff;
+    padding: 8px 25px;
+    font-family: 'Montserrat';
+    margin-top: 15px;
+    font-weight: bold;
+    /* background: linear-gradient(90deg, #000000 0, #58595a); */
+    */: ;
+    /* border: none; */
+    /* color: #fff; */
+    box-shadow: 0 4px 20px #f44336;
+    /* background: none; */
+    border: 1px solid #f44336;
+    border-radius: 10px;
+}
+  .leave-offer h4 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 32px;
+    padding-bottom: 15px;
+    margin-top:15px;
+    margin-bottom:0;
+}
+  .leave-offer {
+    text-align: center;
+}
+  .close-wrapper {
+    text-align: right;
+}
+  .close-wrapper svg {
+    width: 20px;
+    fill: #b22e26;
+    height: 20px;
+    cursor:pointer;
+    transition:.3s;
+}
+  .close-wrapper svg:hover {
+    transition:.3s;
+    fill:#fff;
+  }
+</style>
+<div class="leaving-modal">
+  <span class="filter"></span>
+	<div class="modal-leave">
+      <div class="close-wrapper">
+          {% include "icon-close" %}
+		</div>
+      <div class="leave-offer">
+        <h4>Leaving?</h4>
+        <p class="text-muted">Stick with us and receive an additional 5% OFF your order!</p>
+        <p class="text-muted">Please use the below discount code on checkout:</p>
+        <p class="discount-code">WEOFF5</p>
+      </div>
+    </div>
+</div>
+<script>
+  
+  function discountLeave(){
+      $(document).bind("mouseleave", function(e) {
+        if (e.pageY - $(window).scrollTop() <= 1) {    
+
+          console.log(sessionStorage.getItem('left'));
+          if(sessionStorage.getItem("left")){
+             /// do nothing 
+            
+          } else {
+            // no storage item so display modal 
+             $('.leaving-modal').addClass('active');
+          }
+          
+		}
+        $('.close-wrapper, .leaving-modal .filter').click(function(){
+            $('.leaving-modal').removeClass('active');
+            sessionStorage.setItem('left', true)
+          });
+    });
+  }
+
+  $(document).ready(function(){
+  	discountLeave();
+  });
+</script>
